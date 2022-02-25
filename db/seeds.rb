@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+List.create(name: "Drama")
+List.create(name: "Comedy")
+List.create(name: "Suspense")
+List.create(name: "Horror")
