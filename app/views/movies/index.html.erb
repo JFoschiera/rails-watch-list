@@ -1,0 +1,64 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to "HOME", lists_path, class: "navbar-brand" %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+
+        <li class="nav-item active">
+          <%= link_to "Add Movie",  new_movie_path, class: "nav-link" %>
+        </li>
+
+
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="banner"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.ibb.co/HDdS5Sj/fundo-fotografico-tecido-sublimado-hollywood-400m-x-250m-D-NQ-NP-752726-MLB27858034276-072018-F.jpg')">
+
+  <div class="container" style="height: 250px">
+  </div>
+</div>
+<div class="container text-center ">
+      <h1 style="padding: 50px">Movies</h1>
+      </div>
+
+<div class="container">
+  <div class="row">
+
+    <% @movies.each do |movie| %>
+    <div class="card-product col-4">
+      <img src=<%= movie.poster_url %>>
+      <div class="card-product-infos">
+        <h3><strong><%= movie.title %> </strong> ⭐ <strong><%= movie.rating %></strong></h3>
+        <p class="movie-overview"><%= movie.overview %><br></p>
+        <div class="my-link-to"><%= link_to "Delete",
+            movie_path(movie[:id]),
+            method: :delete,
+            data: { confirm: "Sure about it?" } %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="btn-index-fix-margin">
+    <%= link_to 'Add Movie', new_movie_path, class: 'btn btn-outline-dark' %>
+  </div>
+</div>
+</div>
+</div>
+</div>

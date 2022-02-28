@@ -43,13 +43,14 @@
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
     grid-template-columns: 1fr;
+    font-size: 20px;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
   }
 }
 
@@ -75,22 +76,7 @@
 }
 
 
-.card-product {
-  overflow: hidden;
-  height: 160px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  margin: 20px;
-  width: 500px;
-}
 
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
-}
 
 .card-product h3 {
   font-size: 16px;
@@ -108,4 +94,33 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+
+
+.card-product {
+  overflow: hidden;
+  height: 230px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  width: 500px;
+
+  img {
+    height: 100%;
+    width: 150px;
+    object-fit: cover;
+  }
+}
+
+.my-link-to a {
+  text-decoration: none;
+  color: rgb(46, 46, 46);
+}
+
+.my-link-to a:hover {
+text-decoration: solid;
+color: rgb(0, 0, 0);
 }

@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   resources :bookmarks, only: [:destroy, :new]
 
+  resources :movies, only: %i[index show new create update destroy edit]
+
+
 
   root to: 'lists#index'
 end

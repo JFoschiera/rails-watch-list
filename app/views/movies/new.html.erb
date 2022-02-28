@@ -2,13 +2,13 @@
   <div class="container-fluid">
     <%= link_to "HOME", lists_path, class: "navbar-brand" %>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
+
 
       </ul>
     </div>
@@ -16,8 +16,7 @@
 </div>
 
 
-<div class="banner"
-  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.ibb.co/HDdS5Sj/fundo-fotografico-tecido-sublimado-hollywood-400m-x-250m-D-NQ-NP-752726-MLB27858034276-072018-F.jpg')">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.ibb.co/HDdS5Sj/fundo-fotografico-tecido-sublimado-hollywood-400m-x-250m-D-NQ-NP-752726-MLB27858034276-072018-F.jpg')">
 
   <div class="container" style="height: 250px">
   </div>
@@ -25,17 +24,20 @@
 
 
 <div class="my-bm-container">
-  <h1>New List</h1>
-  <%= simple_form_for(@list) do |f| %>
+<h1>New Movie</h1>
+<%= simple_form_for(@movie) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
   <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :picture_url %>
+    <%= f.input :title %>
+    <%= f.input :overview %>
+    <%= f.input :poster_url %>
+    <%= f.input :rating %>
+
   </div>
   <div class="form-actions" style="padding-bottom: 30px">
     <%= f.button :submit, class: 'btn btn-outline-dark' %>
   </div>
-  <% end  %>
-</div>
+<% end  %>
+  </div>
 </div>

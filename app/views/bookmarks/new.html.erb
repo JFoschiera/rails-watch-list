@@ -1,12 +1,43 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to "HOME", lists_path, class: "navbar-brand" %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
 
 
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <div class="form-inputs">
-    <%= f.input :comment %>
-    <%= f.association :list %>
-    <%= f.association :movie, collection: Movie.all.order(:title) %>
+      </ul>
+    </div>
   </div>
-  <div class="form-actions">
-    <%= f.button :submit, class: 'btn btn-outline-primary' %>
+</div>
+
+
+<div class="banner"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.ibb.co/HDdS5Sj/fundo-fotografico-tecido-sublimado-hollywood-400m-x-250m-D-NQ-NP-752726-MLB27858034276-072018-F.jpg')">
+
+  <div class="container" style="height: 250px">
   </div>
-<% end %>
+</div>
+
+
+<div class="my-bm-container">
+  <h1>Create a new <strong>bookmark!</strong></h1>
+
+  <div class="new-bookmark">
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+    <div class="form-inputs">
+      <%= f.input :comment %>
+      <%= f.association :list %>
+      <%= f.association :movie, collection: Movie.all.order(:title) %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, class: 'btn btn-outline-primary' %>
+    </div>
+    <% end %>
+  </div>
+</div>

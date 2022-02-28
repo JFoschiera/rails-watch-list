@@ -1,10 +1,53 @@
-<div class="row justify-content-center">
-  <div class="col-3">
-    <h3>Edit List</h3>
-    <%= simple_form_for(@list) do |f| %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to "HOME", lists_path, class: "navbar-brand" %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+
+        <li class="nav-item">
+          <%= link_to "Create Bookmark", new_list_bookmark_path(@list), class: "nav-link" %>
+        </li>
+
+
+        <li class="nav-item">
+          <%= link_to "Delete List",
+            list_path,
+            method: :delete,
+            data: { confirm: "Sure about it?" },
+            class: "nav-link" %>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="banner"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @list.picture_url %>)">
+
+  <div class="container">
+    <h1><%= @list.name %></h1>
+  </div>
+</div>
+
+<div class="my-bm-container">
+  <h1>Edit list</h1>
+
+  <div class="new-bookmark">
+
+    <div class="row justify-content-center">
+      <%= simple_form_for(@list) do |f| %>
       <%= f.input :name %>
       <%= f.input :picture_url %>
-      <%= f.button :submit, class: 'btn btn-primary' %>
-    <% end %>
+      <%= f.button :submit, class: 'btn btn-outline-dark' %>
+      <% end %>
+    </div>
   </div>
 </div>
