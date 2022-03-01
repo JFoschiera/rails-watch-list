@@ -18,4 +18,4 @@ Add movies to DB
 
 Add your comment on a movie
 
-# https://vast-gorge-24508.herokuapp.com/lists
+https://vast-gorge-24508.herokuapp.com/lists
