@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ruby 3.0
 
-Things you may want to cover:
+Bootstrap 
 
-* Ruby version
+PostgreSql
 
-* System dependencies
+SCSS
 
-* Configuration
+HTML
 
-* Database creation
+# Features:
 
-* Database initialization
+Create a list of movies
 
-* How to run the test suite
+Add movies to DB
 
-* Services (job queues, cache servers, search engines, etc.)
+Add your comment on a movie
 
-* Deployment instructions
-
-* ...
+# https://vast-gorge-24508.herokuapp.com/lists
