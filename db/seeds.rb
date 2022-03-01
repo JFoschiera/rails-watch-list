@@ -5,10 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 require "json"
 require "rest-client"
 require "open-uri"
+
+
+List.create(name: "Drama")
+List.create(name: "Comedy")
+List.create(name: "Suspense")
+List.create(name: "Horror")
+
+Bookmark.create(comment: 'Lovely movie!', movie_id: 1, list_id: 1)
+Bookmark.create(comment: 'My cup of tea', movie_id: 2, list_id: 1)
+Bookmark.create(comment: 'Could be better', movie_id: 3, list_id: 2)
+
+
 
 url = "http://tmdb.lewagon.com/movie/top_rated"
 post_serialized = URI.open(url).read
